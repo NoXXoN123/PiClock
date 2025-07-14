@@ -19,9 +19,9 @@ This license applies to all files in this project unless explicitly stated other
 
 # [Schematic](https://github.com/user-attachments/files/21221641/ClockPi.pdf)
 # PCB and schematic files
-PCB: 
-Schematic: 
-Kicad_Pro: 
+PCB: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_pcb
+Schematic: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_sch
+Kicad_Pro: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_pro
 # Code:
 main.py:
 ```

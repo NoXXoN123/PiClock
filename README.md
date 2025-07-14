@@ -19,9 +19,9 @@ This license applies to all files in this project unless explicitly stated other
 
 # [Schematic](https://github.com/user-attachments/files/21221641/ClockPi.pdf)
 # PCB and schematic files
-PCB: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_pcb
-Schematic: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_sch
-Kicad_Pro: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_pro
+PCB: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_pcb  
+Schematic: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_sch  
+Kicad_Pro: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_pro  
 # Code:
 main.py:
 ```
@@ -167,24 +167,20 @@ def fast_forward_boot(cycle_duration_sec=10):
         min = (seconds_passed // 60) % 60
         hr  = (seconds_passed // 3600) % 12  # 12-hour format
 
-        # --- Seconds display ---
         sec_buf = [1] * 64
         sec_buf[sec] = 0  # active low
         seconds(*sec_buf)
 
-        # --- Minutes display ---
         min_buf = [1] * 64
         min_buf[min] = 0
         minutes(*min_buf)
 
-        # --- Hours display ---
         hr_buf = [1] * 16
         hr_buf[hr] = 0
         hours(*hr_buf)
 
         time.sleep(delay)
 
-# Now the main loop
 def run_clock():
     last_sec_update = 0
     last_min_update = 0
@@ -204,7 +200,6 @@ def run_clock():
     while True:
         now = time.ticks_ms()
 
-        # --- Handle buttons (same as before) ---
         if BUTTON_HOUR.value() == 1 and time.ticks_diff(now, last_button_hour) > debounce_ms:
             hour = (hour + 1) % 12
             hours(*[0 if i == hour else 1 for i in range(16)])
@@ -217,50 +212,40 @@ def run_clock():
             last_button_minute = now
             last_min_update = now
 
-        # --- Update seconds and blink LED ---
         if time.ticks_diff(now, last_sec_update) >= 1000:
             sec = (sec + 1) % 60
             seconds(*[0 if i == sec else 1 for i in range(64)])
             last_sec_update = now
 
-            # Turn ON LED and store time
             LED.value(1)
             led_on_time = now
 
-        # --- Turn OFF LED after duration ---
         if LED.value() == 1 and time.ticks_diff(now, led_on_time) > led_duration:
             LED.value(0)
 
-        # --- Update minutes ---
         if time.ticks_diff(now, last_min_update) >= 60000:
             minute = (minute + 1) % 60
             minutes(*[0 if i == minute else 1 for i in range(64)])
             last_min_update = now
 
-        # --- Update hours ---
         if time.ticks_diff(now, last_hour_update) >= 3600000:
             hour = (hour + 1) % 12
             hours(*[0 if i == hour else 1 for i in range(16)])
             last_hour_update = now
 
-        # --- PWM dimming based on light sensor ---
         light = get_light_level()
         if light < LIGHT_THRESHOLD:
             set_pwm_all(PWM_DIM)
         else:
             set_pwm_all(PWM_BRIGHT)
 
-        time.sleep(0.01)  # small delay to reduce CPU load
+        time.sleep(0.01) 
 
 
         
         
         
 
-# Run boot animation once
 boot_animation_chase()
-print("Boot chase done")
-fast_forward_boot(10)
-print("Fast forward boot done")
-# Then run clock forever
+fast_forward_boot(10) # <-- 10 Seconds
 run_clock()```

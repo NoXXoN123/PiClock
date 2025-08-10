@@ -19,7 +19,7 @@ noxxonyt@gmail.com
 This license applies to all files in this project unless explicitly stated otherwise.
 
 # Schematic
-<img width="4092" height="2893" alt="PiClock" src="https://github.com/user-attachments/assets/059845b0-818e-44dc-9eab-ddd795eafa1c" /> <br>
+<img width="4092" height="2893" alt="PiClock schematic" src="https://github.com/user-attachments/assets/059845b0-818e-44dc-9eab-ddd795eafa1c" /> <br>
 # PCB and schematic files
 PCB: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_pcb  
 Schematic: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_sch  

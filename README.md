@@ -25,7 +25,7 @@ PCB: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_pcb
 Schematic: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_sch  
 Kicad_Pro: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_pro  
 # How to install
-Install Thonny, Install MicroPython on a Pi Pico, Save the code below as 'main.py' on the directory of the Raspberry Pi by opening File Manager in Thonny (View > Files) or use Save As and choose the Raspberry Pi.
+Install Thonny, Install MicroPython on a Pi Pico, Save the code below as 'main.py' on the directory of the Raspberry Pi by opening File Manager in Thonny (View > Files) or use Save As and choose the Raspberry Pi.  
 # Code:
 main.py:
 

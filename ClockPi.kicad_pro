@@ -478,8 +478,8 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "",
-      "plot": "",
+      "netlist": "../../../../../../../../Program Files/KiCad/8.0/",
+      "plot": "C:/Users/NoXXoN/Desktop/Gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",

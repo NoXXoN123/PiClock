@@ -1,8 +1,8 @@
 # PiClock
-The Official PiClock Repository
+An Original design of an Analog Digital Clock featuring over 210 LEDs and full customization!
 
 # License
-Copyright 2025 Noxtec (NoXXoN)
+Copyright 2025 NoXXoN
 
 All Rights Reserved.
 
@@ -19,7 +19,8 @@ noxxonyt@gmail.com
 This license applies to all files in this project unless explicitly stated otherwise.
 
 # Schematic
-<img width="4092" height="2893" alt="PiClock schematic" src="https://github.com/user-attachments/assets/059845b0-818e-44dc-9eab-ddd795eafa1c" /> <br>
+![Schematic](https://github.com/user-attachments/assets/01cd237a-b6a8-4ec3-a6de-43037a14165f) <br>
+
 # PCB and schematic files
 PCB: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_pcb  
 Schematic: https://github.com/NoXXoN123/PiClock/blob/main/ClockPi.kicad_sch  
